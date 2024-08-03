@@ -1,0 +1,96 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+/* Game Container */
+.game {
+    text-align: center;
+    background-color: #3b3f47;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Board Styles */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #4a4f57;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #5c636e;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+/* Winning Highlight */
+.cell.winning {
+    background-color: #28a745;
+    color: #ffffff;
+    animation: highlight 1s infinite alternate;
+}
+
+@keyframes highlight {
+    from {
+        background-color: #28a745;
+    }
+    to {
+        background-color: #34d058;
+    }
+}
+
+/* Info Section */
+.info {
+    margin-top: 20px;
+}
+
+#message {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+/* Restart Button */
+#restartButton {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#restartButton:hover {
+    background-color: #0056b3;
+}
+
+#restartButton:active {
+    transform: scale(0.95);
+}
